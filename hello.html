@@ -12,40 +12,43 @@
   </head>
   <body>
     <div class="container-mg text-center">
-      <p>Media dos alunos</p>
-
-      <form class="" method="post">
-        <label>Aluno 01</label>
-        <input type="number" id="nota01" value="" max="10">
+      <p>Media dos alunos</p>    
+        <label>Aluno 1</label>
+        <input type="number" id="nota1" type="number" max="10">
         <br>
         <br>
-        <label>Aluno 02</label>
-        <input type="number" id="nota02" value="" max="10">
+        <label>Aluno 2</label>
+        <input type="number" id="nota2" type="number" max="10">
         <br>
         <br>
-        <label>Aluno 03</label>
-        <input type="number" id="nota03" value="" max="10">
+        <label>Aluno 3</label>
+        <input type="number" id="nota3" type="number" max="10">
         <br>
         <br>
-        <label>Aluno 04</label>
-        <input type="number" id="nota04" value="" max="10">
+        <label>Aluno 4</label>
+        <input type="number" id="nota4" type="number" max="10">
         <br>
         <br>
         <button class="btn btn-primary" id="btn">Média</button>
-        <input type="text" id="txtResultado" value="">
-      </form>
+        <input type="text" id="txtResultado">      
   </div>
 
-  <script type="text/javascript">
-    var nota01 = parseFloat(document.getElementById('nota01').value);
-    var nota02 = parseFloat(document.getElementById('nota02').value);
-    var nota03 = parseFloat(document.getElementById('nota03').value);
-    var nota04 = parseFloat(document.getElementById('nota04').value);
+  <script type="text/javascript"> 
 
-    var resultado = parseFloat((nota01 + nota02 + nota03 + nota04) / 4);
+    var btn = document.getElementById("btn");
+   
+    btn.addEventListener("click", function() {
+      var nota1 = parseInt(document.getElementById("nota1"));
+      var nota2 = parseInt(document.getElementById("nota2"));
+      var nota3 = parseInt(document.getElementById("nota3"));
+      var nota4 = parseInt(document.getElementById("nota4"));
+      var resultado = (nota1.value + nota2.value + nota3.value + nota4.value) / 4;
+      r = document.getElementById("txtResultado");
+      r.innerText = resultado.value;
+    });
 
 
-    document.getElementById('txtResultado').setAttribute("value", resultado);
+   
       
   </script>
 </body>
