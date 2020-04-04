@@ -1,1 +1,1 @@
-# TrabalhoSC
+# Trabalho Bimestral da Disciplina Sistemas Cooperativos.
